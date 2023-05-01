@@ -1,0 +1,83 @@
+body{
+  background-color: black;
+}
+.back-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #242d2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 30%;
+    font-size: 2.2em;
+    
+    /* transition: all 0.2s ease-in-out; */
+  }
+  
+  .back-button:hover {
+    background-color: #62ca73;
+    border-radius: 20%;
+    transform: translateY(-10px);
+    box-shadow: 2px 2px 5px grey;
+  }
+.discount-coupons-section {
+    background-color: #18191D;
+    /* background-image: url(https://imgs.search.brave.com/qM_NPN7igfsf2IUu0J-y2fLOxYCYRxBb97sZQBatEJA/rs:fit:626:417:1/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/aG9wcGluZy1vbmxp/bmUtaG9tZS1jb25j/ZXB0LWJsdWUtYmFj/a2dyb3VuZC1jb3B5/c3BhY2VfMTIwNS02/MzAzLmpwZz9zaXpl/PTYyNiZleHQ9anBn); */
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  .discount-coupons-section h2 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .coupon-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    padding: 97px;
+    border: 1px solid #ccc;
+    color: #FDFFE2;
+    background-color: #2d3333;
+    box-shadow: 2px 2px 5px grey;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 15%;
+  }
+  
+  .coupon-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .coupon-card .coupon-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 3.2em;
+  }
+  
+  .coupon-card .coupon-details p strong {
+    font-size: 1.2em;
+    color: #008CBA;
+  }
+  
+  .coupon-card .coupon-details p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+  
+  .coupon-card .coupon-details .validity {
+    font-style: italic;
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: #e0cfcf;
+  }
+  .dic{
+    color: #e0cfcf;
+    
+  }

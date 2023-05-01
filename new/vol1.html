@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project - exit the plugin</title>
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <style>
+      .hidden {
+        display: none;
+      }
+      .center {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        height: 100vh;
+      }
+      #form div {
+        height: 50vh;
+        border: 2px solid black;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        margin: 20px;
+        box-shadow: 2px 2px 8px 2px black;
+        position: relative;
+      }
+      #form div span {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        background-color: rgb(11, 10, 10);
+        color: white;
+        padding: 5px;
+      }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100%-40px);
+        padding: 0px 40px;
+        margin: 0;
+      }
+      #matrix{
+        font-size: 35px;
+        background-color: #2A73F0;
+        color: white;
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <button onclick="handleClick()" id="matrix">TIME WASTE</button>
+      <!-- <span>Chitkara hub</span> -->
+    </div>
+    <div id="form" class="hidden">
+      
+        <div class="wrapper" style="height: 270px;" >
+          <span onclick="handleClose()" id="close">X</span>
+            <form>
+              <p class="Thank"><b>you successfully wasted your precious Time!</b></p> 
+          <a href="new.html" class="exit-button">Get Offer</a>
+      
+        </div>
+    </div>
+    <script>
+      const handleClick = () => {
+        document.getElementById("form").classList.toggle("hidden");
+        document.getElementById("form").classList.toggle("center");
+      };
+      const handleClose = (e) => {
+        document.getElementById("form").classList.add("hidden");
+        document.getElementById("form").classList.remove("center");
+      };
+    </script>
+  </body>
+</html>

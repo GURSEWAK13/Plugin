@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Title</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      #pop-button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      #pop-button:hover {
+        background-color: #d9ee1d;
+      }
+      header {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      nav li {
+        margin: 0 10px;
+      }
+
+      nav li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .main-content {
+        /* background-image: url("https://picsum.photos/1920/1080"); */
+        background-color: rgb(17, 17, 17);
+        background-size: cover;
+        /* height: 100vh; Full-screen height */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .main-content h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .main-content p {
+        font-size: 24px;
+        color: #ffffff;
+        line-height: 1.4;
+        margin-bottom: 40px;
+        /* max-width: 500px; */
+        text-align: center;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        border-radius: 40px;
+
+        font-size: 20px;
+        transition: all 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+      }
+      .right {
+        position: relative;
+        right: 37em;
+        border-left: 10px;
+      }
+      .img-box {
+        height: 270px;
+        width: 250px;
+        margin-right: 20px;
+        border-radius: 25%;
+      }
+      .price {
+        display: flex;
+      }
+      .price-box {
+        padding-left: 100px;
+        padding-right: 100px;
+        border-radius: 40px;
+        margin-right: 30px;
+
+        font-size: 30px;
+        transition: all 0.2s ease;
+        background-color: #484c48; /* Green */
+        border: none;
+        /* color: rgb(233, 138, 138); */
+
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .price-box:hover {
+        transform: scale(1.1);
+        background-color: #398105;
+      }
+      .para {
+        padding-left: 100px;
+        padding-right: 100px;
+        color: #f4f6f4;
+        /* height: 150px;
+        width: 500px; */
+        padding-bottom: 0px;
+        margin-bottom: 0%;
+        padding-bottom: 50px;
+      }
+      .heigh1 {
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        padding: 0px;
+        height: 150px;
+        border-radius: 20%;
+      }
+      .hidden {
+        display: none;
+      }
+      .center {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        height: 100vh;
+      }
+      #form {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+      }
+      #form div {
+        border: 2px solid black;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 284px;
+        width: 200px;
+        padding: 0 20px;
+        margin: 20px;
+        box-shadow: 2px 2px 8px 2px black;
+        /* background: #0e0c0c; */
+        /* background-image: url(https://picsum.photos/1920/1080); */
+        background-color: rgb(28, 28, 28);
+        position: fixed;
+        top: 0;
+      }
+      #form div span {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        background-color: rgb(11, 10, 10);
+        color: white;
+        border-radius: 20%;
+        padding: 5px;
+      }
+      #form {
+        background-color: #010c04;
+      }
+      .matrix:hover {
+        background-color: rgb(43, 185, 224);
+        border-radius: 50%;
+        /* text-shadow: 2px 5px #010c04; */
+        border: 1px solid black;
+      }
+      .matrix {
+        background-color: #666666;
+        color: white;
+        height: 30px;
+        width: 100px;
+        border: none;
+      }
+      .matrix2:hover {
+        background-color: #4131d3;
+      }
+      .matrix2 {
+        background-color: rgb(46, 55, 55);
+        border-radius: 20%;
+        display: flex;
+        position: relative;
+        align-items: last baseline;
+        /* padding-top: 50px; */
+      }
+      .new {
+        position: relative;
+        margin-right: 30px;
+      }
+      .huj {
+        height: 100px;
+        width: 240px;
+        padding-bottom: 20px;
+      }
+      /* .min {
+        height: 700px;
+        width: 200px;
+        background-color: white;
+      } */
+      .costumer-care {
+        display: flex;
+      }
+      .care {
+        background-color: #1c1c1c;
+        height: 150px;
+        width: 250px;
+        border-radius: 20%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 10px;
+      }
+      .care:hover {
+        background-color: rgb(76, 175, 80);
+      }
+      /* .care2 {
+        color: white;
+        position: relative;
+        padding: 50px;
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="right">
+            <button onclick="handleClick()" class="matrix">
+              <b> BACK</b>
+            </button>
+          </li>
+          <li><a href="#" class="matrix">Home</a></li>
+          <li><a href="#" class="matrix">About Us</a></li>
+          <li><a href="#" class="matrix">Services</a></li>
+          <li><a href="#" class="matrix">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="form" class="hidden">
+      <div class="min">
+        <span onclick="handleClose()" id="close">X</span>
+        <p style="color: white"><b>GET 10% OFF </b></p>
+        <img src="Screenshot from 2023-04-26 20-46-17.png" alt="" class="huj" />
+        <button class="matrix2">
+          <a href="new.html"><b>NEW OFFER</b></a>
+        </button>
+      </div>
+    </div>
+    <section class="main-content">
+      <img
+        src="https://imgs.search.brave.com/m32kIfJuVrQAQUEqZ06VQrVaFnXaoVQEcFKLeSOhtIw/rs:fit:600:214:1/g:ce/aHR0cHM6Ly93d3cu/bG9nb2x5bnguY29t/L2ltYWdlcy9sb2dv/bHlueC8zOS8zOTdm/NzU5NmU2NDdiMzE5/ZDVkMmNkZTY5M2Mx/ZmI4Ny5qcGVn"
+        alt=""
+        class="heigh1"
+      />
+
+      <ul style="display: flex" type="none">
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/68/53/40/19685340_43961806_480.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/07/27/21/19072721_41911000_480.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/48/39/45/19483945_43433751_480.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+      <ul class="price" type="none">
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1900</a
+          >
+        </li>
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$0999</a
+          >
+        </li>
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1700</a
+          >
+        </li>
+      </ul>
+      <ul style="display: flex" type="none">
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/33/41/65/19334165_44647371_480.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/07/27/16/19072716_41908997_480.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/07/27/38/19072738_43390065_480.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+      <ul class="price" type="none">
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1890</a
+          >
+        </li>
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1560</a
+          >
+        </li>
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1450</a
+          >
+        </li>
+      </ul>
+      <ul style="display: flex" type="none">
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/18/66/04/26/18660426_41164117_480.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/68/53/36/19685336_43960167_480.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/07/17/80/19071780_43702443_480.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+      <ul class="price" type="none">
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1380</a
+          >
+        </li>
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1787</a
+          >
+        </li>
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1740</a
+          >
+        </li>
+      </ul>
+      <ul style="display: flex" type="none">
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/68/53/06/19685306_43983845_480.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/46/74/30/19467430_43457783_480.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            class="img-box"
+            src="https://cdn-images.farfetch-contents.com/19/07/17/59/19071759_42484475_480.jpg"
+            alt=""
+          />
+        </li>
+      </ul>
+
+      <ul class="price" type="none">
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1780</a
+          >
+        </li>
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1430</a
+          >
+        </li>
+        <li class="price-box">
+          <a
+            href="https://www.farfetch.com/ca/shopping/men/balmain/shoes-2/items.aspx"
+            >$1790</a
+          >
+        </li>
+      </ul>
+
+      <img src="Screenshot from 2023-04-26 16-03-06.png" alt="" class="para" />
+      <ul class="costumer-care">
+        <li class="care">
+          <b style="color: white; padding: 65px">BOUTIQUES</b><br />
+          <p style="font-size: small">
+            You can also find us in one of our Balmain boutiques.
+          </p>
+        </li>
+        <li class="care">
+          <b style="color: white; padding: 50px">CUSTOMER CARE</b>
+          <br />
+          <p style="font-size: small">
+            <br />
+            Do you have any questions? We are here to help you. You can contact
+            <br />
+            our customer care team by email or over the phone.
+          </p>
+        </li>
+        <li class="care">
+          <b style="color: white; padding: 100px">FAQ</b><br />
+          <p style="font-size: small">
+            Find all the answers to the frequently asked questions below.
+          </p>
+        </li>
+      </ul>
+      <button id="pop-button" class="btn">
+        <a href="vol1.html" style="color: rgb(16, 15, 15)">GET OFFER</a>
+      </button>
+    </section>
+    <script>
+      const handleClick = () => {
+        document.getElementById("form").classList.toggle("hidden");
+        document.getElementById("form").classList.toggle("center");
+      };
+      const handleClose = (e) => {
+        document.getElementById("form").classList.add("hidden");
+        document.getElementById("form").classList.remove("center");
+      };
+    </script>
+  </body>
+</html>
